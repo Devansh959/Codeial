@@ -1,0 +1,25 @@
+#foot-nav{
+    position: relative;
+    top:1rem;
+    display:flex;
+    justify-content: flex-start;
+    background-color: black;
+    
+}
+#author{
+    color:white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+#links{
+    display:flex;
+    flex-direction: column;
+    
+    a{
+        color:white;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        &:visited{
+            color:white;
+            
+        }
+    }
+}

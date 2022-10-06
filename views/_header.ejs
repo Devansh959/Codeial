@@ -1,7 +1,8 @@
 <header>
-    Page Header
+    <div id="nav">
+    <p id="logo">CODEIAL</p>
 
-    <ul>
+    <ul id="user-auth">
         <% if (locals.user){ %>
             <li>
                 <a href="/users/profile"><%=user.name%></a>  
@@ -21,4 +22,5 @@
 
         <% } %>
     </ul>
+</div>
 </header>
