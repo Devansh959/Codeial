@@ -3,7 +3,14 @@
         <p id="author">©DEVANSH VERMA. All Rights Reserved</p>
         <ul id="links">
             <li><a href="http://localhost:3000">HOME</a></li>
-            <li><a href="http://localhost:3000/users/profile/<%=user.id%>">PROFILE</a></li>
+            <% if(locals.user){%>
+            <li><a href="/users/profile/<%=user.id%>">PROFILE</a></li>
+            <%}else{%>
+                <li>
+                    <a href="/users/sign-in">PROFILE</a>
+                </li>
+                
+            <%}%>
         </ul>
         
     </div>
