@@ -24,7 +24,7 @@ const customMware= require('./config/middleware');
 const chatServer= require('http').Server(app);
 const chatSockets= require('./config/chat_sockets').chatSockets(chatServer);
 chatServer.listen(443);
-console.log('chat server is listening on port 80');
+console.log('chat server is listening on port 443');
 const path= require('path');
 if(env.name == 'development'){
     app.use(sassMiddleware({
@@ -41,7 +41,7 @@ if(env.name == 'development'){
 
 
 
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended:false}));
 app.use(cookieParser());
 app.use(express.static(env.asset_path));
 

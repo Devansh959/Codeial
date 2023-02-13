@@ -25,7 +25,4 @@ gulp.task('minifyjs',function(){
     return gulp.src('assets/js/*.js')
     .pipe(minify())
     .pipe(gulp.dest('public/assets/js'))
-
-
-    
 })
