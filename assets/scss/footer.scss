@@ -1,6 +1,13 @@
+#foot{
+    position:fixed;
+    bottom:0;
+     
+    margin-top:auto;
+
+}
 #foot-nav{
-    position: relative;
-    top:1rem;
+    
+    width:100vw;
     display:flex;
     justify-content: flex-start;
     background-color: black;

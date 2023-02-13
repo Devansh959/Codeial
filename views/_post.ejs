@@ -1,7 +1,7 @@
-<li><p>
+<li id="post-<%= post._id %>"><p>
     <% if (locals.user && locals.user.id == post.user.id){%>
     <small>
-    <a href="/posts/destroy/<%= post.id%>">X</a>
+    <a class="delete-post-button" href="/posts/destroy/<%= post.id%>">X</a>
 
 </small><%}%>
     <%=post.content%>
@@ -9,10 +9,21 @@
     <small>
             <%=post.user.name%>
     </small>
+    <br>
+    <small>
+        <% if (locals.user){%> 
+        <a class="toggle-like-button" data-likes="<%= post.likes.length %>" href="/likes/toggle/?id=<%=post._id%>&type=Post">
+                <%= post.likes.length %> Likes
+        </a>
+        <% }else{ %>
+        <%= post.likes.length %> Likes
+        <%}%>
+    </small>
+    
 </p>
 <div class="post-comments">
     <% if (locals.user){ %>
-            <form action="/comment/create" method="POST">
+            <form id="new-comment-form"  action="/comment/create" method="POST">
                   <input type="text" name="content" placeholder="Type here to add comment...">
                   <input type="hidden" name="post" value="<%=post._id%>" >
                   <input type="submit" value="Add Comment">

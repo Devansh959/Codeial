@@ -1,5 +1,15 @@
+html {
+  height: 100%; }
+
 body {
   margin: 0;
-  /* text-align:center; */ }
+  /* text-align:center; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
   body #layout-main {
     height: 100%; }
+
+main {
+  margin-bottom: 8rem; }
