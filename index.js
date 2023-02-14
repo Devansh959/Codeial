@@ -23,7 +23,7 @@ const customMware= require('./config/middleware');
 //set up chat server to be used with socket.io
 const chatServer= require('http').Server(app);
 const chatSockets= require('./config/chat_sockets').chatSockets(chatServer);
-chatServer.listen(443);
+chatServer.listen(678);
 console.log('chat server is listening on port 443');
 const path= require('path');
 if(env.name == 'development'){
